@@ -1,0 +1,125 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+body{
+    background-color: black;
+    color: white;
+}
+
+.left{
+    width: 25vw;
+    padding: 10px;
+}
+.right{
+    width: 75vw;
+    margin: 16px 0;
+}
+
+
+.home ul li{
+    width: 15px;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    font-weight: bold;
+}
+.heading{
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    padding-top: 14px;
+    padding: 23px 14px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 13px;
+}
+
+.heading img{
+    width: 30px;
+}
+
+.library{
+    position: relative;
+    min-height: 76vh;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    font-size:9px ;
+    color: gray;
+    gap: 11px;
+    padding: 15px 0;
+    
+}
+
+
+.footer a{
+    color: grey;
+}
+
+.header{
+    display: flex;
+    justify-content:space-between;
+    background-color: rgb(30, 30, 30);
+}
+
+.header > *{
+    padding: 20px;
+}
+
+.spotifyPlaylist{
+    padding: 16px;
+}
+
+.cardContainer{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.card{
+    width: 220px;
+    background-color: #252525;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+}
+
+.card >*{
+    padding-top: 10px;
+}
+
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.circle-container {
+    width: 50px;                
+    height: 50px;               
+    background-color: #2bb45b;     
+    border-radius: 50%;         
+    display: flex;               
+    justify-content: center;     
+    align-items: center;        
+    padding-bottom: 3px;
+    padding: 0;
+    position: absolute;
+    top: 185px;
+    right: 13px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.circle-container svg {
+    width: 20px;                
+    height: 55px;     
+}
+
