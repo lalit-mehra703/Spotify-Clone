@@ -18,6 +18,7 @@ body{
 .right{
     width: 75vw;
     margin: 16px 0;
+    position: relative;
 }
 
 
@@ -162,4 +163,18 @@ body{
 
 }
 
+.playbar{
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(139, 198, 139);
+    width: 100%;
+    padding: 12px;
+    
+}
+
+.songbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
