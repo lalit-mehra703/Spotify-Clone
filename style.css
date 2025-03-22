@@ -12,8 +12,8 @@ body{
 }
 
 .left{
-    width: 25vw;
-    padding: 10px;
+    width: 30vw;
+    padding: 9px;
 }
 .right{
     width: 75vw;
@@ -166,8 +166,8 @@ body{
 .playbar{
     position: absolute;
     bottom: 0;
-    background-color: rgb(139, 198, 139);
-    width: 100%;
+    background-color: rgb(227, 236, 227);
+    width: 90%;
     padding: 12px;
     
 }
@@ -178,3 +178,37 @@ body{
     align-items: center;
 }
 
+.info{
+    padding-top: 9px;
+}
+
+.songList ul{
+    padding: 0 42px;
+}
+
+.songList ul li{
+    list-style-type: decimal;
+    display: flex;
+    gap: 34px;
+    cursor: pointer;
+    padding:12px 0 ;
+    border: 1px solid white;
+    margin: 12px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.playnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+
+.playnow span{
+    font-size: 12px;
+    width: 64px;
+    padding: 12px;
+    
+}
