@@ -28,20 +28,20 @@ async function main() {
     let songs = await getSongs()
     console.log(songs)
     
+    // show all the song in the playlist 
     let songUl = document.querySelector(".songList").getElementsByTagName("ul")[0]
     // console.log(songUl)
     for (const song of songs) {
-        songUl.innerHTML = songUl.innerHTML+ `<li>${song.replaceAll("-", " ")}</li>`;
+        songUl.innerHTML = songUl.innerHTML+ `<li><img class="invert" src="music.svg" alt="">
+                            <div class="info">
+                                <div>${song.replaceAll("-", " ")}</div>
+                                <div>Lucky</div>
+                            </div>
+                            <div class="playnow">
+                                <span>Play Now</span>
+                                <img class="invert" src="https://cdn.hugeicons.com/icons/play-circle-02-stroke-sharp.svg" alt="play-circle-02" width="32" height="32">
+                            </div> </li>`;
     }
-
-    var audio = new Audio(songs[0]);
-    // audio.play();
-
-    audio.addEventListener("loadeddata", () => {
-    // let duration = audio.duration;
-    console.log(audio.duration,audio.currentSrc,audio.currentTime);
-  // The duration variable now holds the duration (in seconds) of the audio clip
-});
 
 }
 
