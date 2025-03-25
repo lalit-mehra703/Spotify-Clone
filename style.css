@@ -172,7 +172,7 @@ body{
     width: 90%;
     padding: 12px;
     width: 60vw;
-    height: 39px;
+    height: 59px;
     
 }
 
@@ -180,6 +180,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .info{
@@ -257,3 +258,10 @@ body{
     /* padding: 0px 5px; */
     margin: 0 5px;
 }
+
+.abovebar{
+    display: flex;
+    justify-content: space-between;
+}
+
+

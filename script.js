@@ -1,5 +1,20 @@
 console.log("Lets write JavaScript");
 let currentSong = new Audio();
+
+function secondsToMinutesSeconds(seconds){
+    if (isNaN(seconds) || seconds<0){
+        return "Invalid input";
+    }
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    const formattedMinute = String(minutes).padStart(2,'0');
+    const formattedSecond = String(remainingSeconds).padStart(2,'0');
+
+    return `${formattedMinute}:${formattedSecond}`;
+
+}
 async function getSongs(){
 
     let a = await fetch("http://127.0.0.1:3000/songs/")
@@ -29,6 +44,8 @@ const playMusic = (track)=>{
     currentSong.src = "/songs/"+track;
     currentSong.play()
     Play.src = "pause.svg"
+    document.querySelector(".songinfo").innerHTML = track
+    document.querySelector(".songtime").innerHTML ="00:00/00:00"
 }
 
 async function main() {
@@ -72,6 +89,11 @@ async function main() {
             // Play.src = "https://cdn.hugeicons.com/icons/play-circle-02-stroke-sharp.svg"
             Play.src ="play.svg"
         }
+    })
+
+    currentSong.addEventListener("timeupdate",()=>{
+        console.log(currentSong.currentTime,currentSong.duration);
+        document.querySelector(".songtime").innerHTML = `${secondsToMinutesSeconds(currentSong.currentTime)}/${secondsToMinutesSeconds(currentSong.duration)}`
     })
     
 }
