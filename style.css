@@ -6,6 +6,10 @@
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
 }
+
+.close{
+    display: none;
+}
 body{
     background-color: black;
     color: white;
@@ -80,12 +84,16 @@ body{
     padding: 16px;
 }
 
+.spotifyPlaylist h1{
+    padding: 16px;
+}
+
 .cardContainer{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
     margin: 30px;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: 70vh;
 }
 .card{
@@ -128,7 +136,7 @@ body{
 }
 
 .button > *{
-    margin: 0 12px;
+    margin: 0 10px;
 }
 
 .signupbtn{
@@ -172,7 +180,7 @@ body{
     width: 90%;
     padding: 12px;
     width: 60vw;
-    height: 59px;
+    min-height: 59px;
     
 }
 
@@ -195,6 +203,17 @@ body{
 
 .songList ul{
     padding: 0 12px;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburgerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
 }
 
 .songList ul li{
@@ -266,4 +285,69 @@ body{
     justify-content: space-between;
 }
 
+@media(max-width:1150px){
+    .left{
+        position: absolute;
+        left: -120%;
+        transition:all .3s;
+        z-index: 1;
+        width: 350px;
+        background-color: black;
+    }
+
+    .left .close{
+        position: absolute;
+        right: 31px;
+        top: 25px;
+        width: 29px;
+        z-index: 1;
+    }
+
+    .right{
+        width:100vw ;
+    }
+
+    .playbar{
+        width: 85vw;
+    }
+
+    .seekbar{
+        width: 84vw;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .right{
+        margin: 0;
+    }
+
+    .card{
+        width: 90vw;
+    }
+
+    .cardContainer{
+        margin: 0;
+        justify-content: center;
+    }
+
+    .songinfo{
+        font-size: 12px;
+    }
+    .songtime{
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .close{
+        display: block;
+    }
+
+    .abovebar{
+        flex-direction: column;
+        gap: 23px;
+        align-items: center;
+    }
+}
 
